@@ -3,7 +3,7 @@ import axios from 'axios';
 export default async function handler(req, res) {
     try {
         // Get token
-        const tokenResponse = await axios.get("https://dramabox-token.vercel.app/token");
+        const tokenResponse = await axios.get("https://dramabox-key.vercel.app/token");
         const gettoken = tokenResponse.data;
 
         const url = "https://sapi.dramaboxdb.com/drama-box/he001/theater";
@@ -46,4 +46,5 @@ export default async function handler(req, res) {
             error: error.message 
         });
     }
+
 }
